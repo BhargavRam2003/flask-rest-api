@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Resource, Api, reqparse, abort, fields, marshal_with
 
@@ -75,7 +75,7 @@ api.add_resource(User, "/api/users/<id>")
 
 @app.route('/')
 def home():
-    return "<h1>HelloFlask!!!</h1>"
+    return render_template("bunny.html")
 
 if  __name__ == "__main__":
     app.run(debug=True)

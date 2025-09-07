@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bunny with Flower</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #fce4ec;
+    }
+
+    .message {
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      color: #e91e63;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .bunny {
+      position: relative;
+      width: 150px;
+      height: 200px;
+    }
+
+    /* Bunny head */
+    .head {
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      left: 25px;
+      top: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .eye {
+    width: 12px;
+    height: 12px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    animation: blink 4s infinite;
+    }
+
+    .eye.left {
+    left: 25px;
+    }
+
+    .eye.right {
+    right: 25px;
+    }
+
+    @keyframes blink {
+    0%, 90%, 100% {
+        transform: scaleY(1);
+    }
+    95% {
+        transform: scaleY(0.1);
+    }
+    }
+
+
+    /* Ears */
+    .ear {
+      width: 30px;
+      height: 70px;
+      background: #fff;
+      border-radius: 50px;
+      position: absolute;
+      top: -20px;
+    }
+    .ear.left { left: 10px; }
+    .ear.right { right: 10px; }
+    .ear::after {
+      content: "";
+      width: 15px;
+      height: 50px;
+      background: pink;
+      border-radius: 50px;
+      position: absolute;
+      left: 7px;
+      top: 10px;
+    }
+
+    /* Eyes */
+    .eye {
+      width: 15px;
+      height: 15px;
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 40px;
+    }
+    .eye.left { left: 20px; }
+    .eye.right { right: 20px; }
+
+    /* Nose */
+    .nose {
+      width: 10px;
+      height: 10px;
+      background: pink;
+      border-radius: 50%;
+      position: absolute;
+      top: 60px;
+      left: 45px;
+    }
+
+    /* Bunny arms */
+    .arm {
+      width: 20px;
+      height: 40px;
+      background: #fff;
+      border-radius: 20px;
+      position: absolute;
+      top: 120px;
+    }
+    .arm.left { left: 10px; transform: rotate(20deg); }
+    .arm.right { right: 10px; transform: rotate(-20deg); }
+
+    /* Flower */
+    .flower {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .petal {
+      width: 30px;
+      height: 30px;
+      background: pink;
+      border-radius: 50%;
+      position: absolute;
+      top: -38px;
+      left: -15px;
+      transform-origin: 15px 40px;
+    }
+    .petal:nth-child(1) { transform: rotate(0deg); }
+    .petal:nth-child(2) { transform: rotate(72deg); }
+    .petal:nth-child(3) { transform: rotate(144deg); }
+    .petal:nth-child(4) { transform: rotate(216deg); }
+    .petal:nth-child(5) { transform: rotate(288deg); }
+    .center {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: yellow;
+  border-radius: 50%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+  </style>
+</head>
+<body>
+  <div class="message">💖 Lubb uu minnu buddulu 💖</div>
+  <div class="bunny">
+    <div class="head">
+      <div class="ear left"></div>
+      <div class="ear right"></div>
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="nose"></div>
+    </div>
+    <div class="arm left"></div>
+    <div class="arm right"></div>
+    <div class="flower">
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="center"></div>
+    </div>
+  </div>
+</body>
+</html>
